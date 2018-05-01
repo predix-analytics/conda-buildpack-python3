@@ -5,6 +5,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     rm -fr Miniconda-3.7.3-Linux-x86_64.sh
 
     conda install pip --yes | indent
+    conda info --envs
     conda clean -pt --yes > /dev/null
 fi
 
