@@ -6,7 +6,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
 
     conda install pip --yes | indent
     conda info --envs
-    ls -R
+    ls -R /anaconda/envs
     conda clean -pt --yes > /dev/null
 fi
 
