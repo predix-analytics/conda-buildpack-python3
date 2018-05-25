@@ -1,4 +1,3 @@
-conda clean -pt --yes > /dev/null
 if [ ! -d /app/.heroku/miniconda ]; then
     puts-step "Preparing Python/Miniconda Environment (4.5.1)"
     curl -Os https://repo.continuum.io/miniconda/Miniconda3-4.5.1-Linux-x86_64.sh
@@ -8,7 +7,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     conda install pip --yes | indent
     conda clean -pt --yes > /dev/null
 fi
-
+conda clean -pt --yes > /dev/null
 
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
