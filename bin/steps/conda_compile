@@ -8,6 +8,8 @@ if [ ! -d /app/.heroku/miniconda ]; then
     conda clean -pt --yes > /dev/null
 fi
 
+conda clean --all
+
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
     conda install --file conda-requirements.txt --yes | indent
